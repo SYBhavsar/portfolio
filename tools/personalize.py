@@ -100,7 +100,7 @@ tokens = {
     'skillsHeading': e(d['skillsHeading']), 'experienceHeading': e(d['experienceHeading']),
     'projectsHeading': e(d['projectsHeading']), 'contactHeading': e(d['contactHeading']),
     'contactIntro': e(d['contactIntro']), 'email': d['email'], 'contactNote': e(d['contactNote']),
-    'location': d['location'], 'tzShort': d['timezone'].split('(')[1][:-1],
+    'siteUrl': d['siteUrl'], 'location': d['location'], 'tzShort': d['timezone'].split('(')[1][:-1],
 }
 for i, (num, label) in enumerate(d['stats']):
     tokens[f'stat{i}Num'] = num
