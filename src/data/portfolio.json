@@ -1,0 +1,407 @@
+{
+  "_notes": "Single source of truth for personal content. Rebuild with: python3 tools/personalize.py. Empty url => row/link omitted (never guessed). Project 'image': path under public/ (e.g. /projects/foo.png); empty or missing file => /projects/placeholder.svg.",
+  "name": "Suyash Bhavsar",
+  "initials": "SB",
+  "headline": "AI Engineer",
+  "city": "Pune",
+  "location": "Pune, India",
+  "timezone": "India (GMT+5:30)",
+  "coords": "18.52°N 73.86°E",
+  "status": "Open to new roles",
+  "title": "Suyash Bhavsar — AI Engineer",
+  "metaDescription": "AI Engineer in Pune, India. I build real-time voice AI, LLM and RAG systems, and the low-latency backend services behind them — FastAPI, Redis and async processing.",
+  "keywords": "AI Engineer,Voice AI,LLM,RAG,FastAPI,Redis,Backend,Pune",
+  "heroLines": [
+    "I build voice & LLM",
+    "systems that <em>scale.</em>"
+  ],
+  "heroIntro": "Production voice agents, LLM/RAG pipelines and the low-latency, event-driven backends behind them — FastAPI, Redis and async processing.",
+  "stats": [
+    [
+      "1000+",
+      "Daily user queries"
+    ],
+    [
+      "5,000+",
+      "Customers reached"
+    ],
+    [
+      "500+",
+      "Concurrent sessions"
+    ],
+    [
+      "12",
+      "Tenant orgs on the platform"
+    ]
+  ],
+  "aboutLead": "I'm an AI Engineer at Graas in Pune, building real-time voice AI and LLM/RAG systems.",
+  "aboutParagraphs": [
+    "I design full-duplex, low-latency voice agents on OpenAI Realtime and Gemini Live, and production LLM pipelines — hybrid retrieval, prompt caching and evaluation — behind a conversational AI system handling 1000+ daily queries.",
+    "My backend work is Python (FastAPI) and PHP (Laravel) with Redis, Celery and OpenSearch: async, event-driven services, multi-tenant access control and observability for live voice and chat traffic."
+  ],
+  "facts": [
+    [
+      "Location",
+      "Pune, India"
+    ],
+    [
+      "Education",
+      "M.Sc. Computer Science — MIT World Peace University (2022 – 2024)"
+    ],
+    [
+      "Credentials",
+      "UGC-NET (June 2024) and Maharashtra SET — Assistant Professor eligibility in Computer Science"
+    ],
+    [
+      "Focus",
+      "Real-time voice AI, LLM/RAG, AI agents & distributed backend systems"
+    ],
+    [
+      "Availability",
+      "Open to AI engineering roles — Pune or remote (India)."
+    ]
+  ],
+  "whatIDo": [
+    [
+      "Real-time voice AI",
+      "Full-duplex voice agents over WebRTC and WebSocket with a pluggable provider layer (OpenAI Realtime, Gemini Live) and live-agent hand-off."
+    ],
+    [
+      "LLM & RAG systems",
+      "Hybrid retrieval — structured filtering, KNN semantic search and keyword fallback — with prompt caching and manual-plus-A/B evaluation."
+    ],
+    [
+      "Async backend engineering",
+      "FastAPI and Laravel services on Redis-backed queues and gevent-pooled Celery workers, built for 500+ concurrent sessions."
+    ],
+    [
+      "Multi-tenant platforms",
+      "OTP auth, org-scoped data isolation and a hook-based customization framework used by 10+ client organizations."
+    ]
+  ],
+  "skillsHeading": "Tools I ship with",
+  "skills": [
+    [
+      "Voice AI & LLM",
+      [
+        [
+          "OpenAI Realtime API",
+          1
+        ],
+        [
+          "Gemini Live API",
+          1
+        ],
+        [
+          "LLMs",
+          1
+        ],
+        [
+          "RAG",
+          1
+        ],
+        [
+          "Hybrid Search",
+          0
+        ],
+        [
+          "Prompt Engineering",
+          0
+        ],
+        [
+          "LangChain",
+          0
+        ],
+        [
+          "MCP",
+          0
+        ],
+        [
+          "Pinecone",
+          0
+        ],
+        [
+          "LLM Evaluation",
+          0
+        ],
+        [
+          "TensorFlow",
+          0
+        ],
+        [
+          "Keras",
+          0
+        ]
+      ]
+    ],
+    [
+      "Backend & Real-Time",
+      [
+        [
+          "Python",
+          1
+        ],
+        [
+          "FastAPI",
+          1
+        ],
+        [
+          "PHP (Laravel)",
+          1
+        ],
+        [
+          "asyncio",
+          1
+        ],
+        [
+          "Flask",
+          0
+        ],
+        [
+          "Spring Boot",
+          0
+        ],
+        [
+          "REST APIs",
+          0
+        ],
+        [
+          "Microservices",
+          0
+        ],
+        [
+          "Multi-Tenant Architecture",
+          0
+        ],
+        [
+          "WebRTC",
+          0
+        ],
+        [
+          "WebSockets",
+          0
+        ],
+        [
+          "Redis",
+          0
+        ],
+        [
+          "Celery",
+          0
+        ]
+      ]
+    ],
+    [
+      "Cloud, Data & Observability",
+      [
+        [
+          "AWS (CodeDeploy)",
+          1
+        ],
+        [
+          "Docker",
+          1
+        ],
+        [
+          "PostgreSQL",
+          1
+        ],
+        [
+          "OpenSearch",
+          1
+        ],
+        [
+          "MySQL",
+          0
+        ],
+        [
+          "MongoDB",
+          0
+        ],
+        [
+          "SQL",
+          0
+        ],
+        [
+          "Google Chat Alerting",
+          0
+        ]
+      ]
+    ],
+    [
+      "Tools, Testing & Frontend",
+      [
+        [
+          "Git",
+          1
+        ],
+        [
+          "Linux",
+          1
+        ],
+        [
+          "Pytest",
+          1
+        ],
+        [
+          "Pest",
+          1
+        ],
+        [
+          "GitHub",
+          0
+        ],
+        [
+          "Postman",
+          0
+        ],
+        [
+          "Jira",
+          0
+        ],
+        [
+          "Claude Code",
+          0
+        ],
+        [
+          "React",
+          0
+        ],
+        [
+          "Tailwind CSS",
+          0
+        ],
+        [
+          "Vite",
+          0
+        ],
+        [
+          "Alpine.js",
+          0
+        ],
+        [
+          "JavaScript",
+          0
+        ]
+      ]
+    ]
+  ],
+  "experienceHeading": "Where I've worked",
+  "experience": [
+    {
+      "dates": "Jul 2024 — Present",
+      "place": "Pune, India",
+      "role": "AI Engineer",
+      "org": "Graas",
+      "bullets": [
+        "Designed, built and deployed Graas's real-time voice AI system end to end for WhatsApp voice calls and web — a full-duplex WebRTC/WebSocket pipeline with a pluggable provider layer (OpenAI Realtime, Gemini Live) and live-agent hand-off; scaled to outbound campaigns reaching 5,000+ customers.",
+        "Built live call-quality and latency monitoring that brings root-cause debugging of production voice issues to under 14 minutes, plus an evaluation system combining manual review and A/B testing.",
+        "Developed an LLM-powered conversational AI system handling 1000+ daily user queries, with hybrid product retrieval (DSL-based filtering, KNN semantic search, structured → vector → keyword fallback).",
+        "Cut response latency by ~40% with Redis-based asynchronous processing — queue-based webhook ingestion decoupled from LLM generation, per-organization prompt caching and short-TTL product caching — on FastAPI and Laravel services supporting 500+ concurrent sessions.",
+        "Engineered a versioned hook-based customization framework with a UI function runner, used by 10+ client organizations to add custom tools and scheduled jobs without code changes or redeploys.",
+        "Integrated WhatsApp and Facebook APIs (70% of interactions via messaging channels) and designed multi-tenant access control — OTP auth and org-scoped data isolation across 12 tenant organizations."
+      ]
+    },
+    {
+      "dates": "Jan 2024 — Jun 2024",
+      "place": "Pune, India",
+      "role": "Software Engineer Intern",
+      "org": "Graas",
+      "bullets": [
+        "Built a Spring Boot data-operations automation framework for metrics query workflows with approval tracking, reducing manual verification steps across 5 teams.",
+        "Developed a static impact-analysis tool for Magento using PHPStan, PHPParser and AST parsing; it cut manual regression-testing time by about 30% across 50+ modules."
+      ]
+    }
+  ],
+  "projectsHeading": "Built, tested, shipped",
+  "projects": [
+    {
+      "accent": "coral",
+      "year": "",
+      "tag": "Voice AI · Proof of concept",
+      "name": "Voice Calling Agent",
+      "subtitle": "Real-time streaming AI voice system",
+      "description": "A proof-of-concept voice agent: the browser captures microphone audio and opens a WebRTC session with a FastAPI backend, which streams it to an AI provider (OpenAI or Gemini) and plays the voice reply back with live transcripts over WebSocket. A pluggable provider layer sits behind a unified interface, with mid-conversation tool calling (mocked in the repo) and handling of partial transcripts and interruptions. Per-call latency instrumentation logs each stage from WebRTC to AI response to tool call; the repo's tool calls run against a SQLite product catalogue.",
+      "metric": "Full-duplex · per-stage latency logging",
+      "stack": "Python / FastAPI / WebRTC / WebSockets / OpenAI / Gemini",
+      "live": "",
+      "code": "https://github.com/SYBhavsar/VoiceCallingAgent",
+      "image": ""
+    },
+    {
+      "accent": "amber",
+      "year": "",
+      "tag": "RAG · Backend",
+      "name": "AICompete",
+      "subtitle": "AI competitive intelligence platform",
+      "description": "An end-to-end competitive intelligence platform built on FastAPI, Celery and scraping pipelines, with LLM-powered summarization and a RAG pipeline over Pinecone embeddings. Background analytics and alerting workflows on Scrapy, Redis and PostgreSQL drive sentiment tracking, keyword detection and automated competitor monitoring.",
+      "metric": "",
+      "stack": "FastAPI / Celery / Scrapy / Redis / PostgreSQL / Pinecone / LangChain",
+      "live": "",
+      "code": "https://github.com/SYBhavsar/CompeteAI",
+      "image": ""
+    },
+    {
+      "accent": "lime",
+      "year": "",
+      "tag": "Developer Tooling",
+      "name": "Tailwind Magic",
+      "subtitle": "CSS-to-Tailwind converter and refactoring utility",
+      "description": "A command-line utility that converts legacy CSS into Tailwind utility classes across HTML, React, Vue and Angular projects. It uses AST-based parsing and a reverse lookup of Tailwind styles, maps media queries to responsive prefixes, and offers automatic backups, a dry-run mode and detailed conversion reports.",
+      "metric": "",
+      "stack": "Node.js / JavaScript / AST parsing / Tailwind CSS",
+      "live": "",
+      "code": "https://github.com/SYBhavsar/Tailwind-Magic",
+      "image": ""
+    },
+    {
+      "accent": "teal",
+      "year": "",
+      "tag": "Web App",
+      "name": "GPAVBHAG",
+      "subtitle": "Restaurant website",
+      "description": "A responsive restaurant web application with menu browsing and item pages, a validated contact form, and an interactive location map. Built with React Router and lazy-loaded pages, Context API state, custom hooks for forms, localStorage and weather data, and a mobile-first Tailwind CSS layout.",
+      "metric": "",
+      "stack": "React 19 / Vite / Tailwind CSS / React Router",
+      "live": "https://gpavbhag.vercel.app",
+      "code": "https://github.com/SYBhavsar/GpavbhaG",
+      "image": ""
+    },
+    {
+      "accent": "violet",
+      "year": "",
+      "tag": "Machine Learning",
+      "name": "Handwriting Classifier",
+      "subtitle": "Human vs. computer-generated text",
+      "description": "A web app that classifies an image of a word as human-written or computer-generated using a CNN. It trains on handwritten words plus a generated dataset of words rendered in many fonts, with mixed-precision training, logging, and a Flask interface for image upload and prediction.",
+      "metric": "",
+      "stack": "Python / TensorFlow / Keras / Flask",
+      "live": "",
+      "code": "https://github.com/SYBhavsar/Writing-classifier",
+      "image": ""
+    },
+    {
+      "accent": "coral",
+      "year": "",
+      "tag": "Web App",
+      "name": "Spell Checker",
+      "subtitle": "Real-time spelling suggestions",
+      "description": "A spell-checking web app that flags misspellings as you type, offers live suggestions, and lets you add words to a custom dictionary or clear it. Built with Laravel, Alpine.js and Tailwind CSS.",
+      "metric": "",
+      "stack": "Laravel / Alpine.js / Tailwind CSS",
+      "live": "",
+      "code": "https://github.com/SYBhavsar/spellchecker",
+      "image": ""
+    }
+  ],
+  "contactHeading": "Have something worth shipping?",
+  "contactIntro": "Tell me about the product, the problem, or the role — email works best.",
+  "email": "bhavsarsuyash30@gmail.com",
+  "phone": "+91 7350916215",
+  "phoneDisplay": "+91 73509 16215",
+  "linkedin": "https://www.linkedin.com/in/suyash-bhavsar-0a9769234",
+  "github": "https://github.com/SYBhavsar",
+  "resumeFile": "Suyash_Bhavsar_Resume.pdf",
+  "contactNote": "Open to AI engineering roles — Pune or remote (India).",
+  "publication": "Predicting Student Placement using Machine Learning Models: A Comparative Analysis — International Journal For Multidisciplinary Research (May 2024)"
+}

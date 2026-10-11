@@ -1,0 +1,11 @@
+# private / not for publishing
+application_faq.md
+Suyash_Bhavsar_Resume.md
+Suyash_Bhavsar_Resume_v2_computermodern.*
+task.md
+.playwright-mcp/
+assets/
+# Phase 1 reference material (contains the design source's personal content)
+reference/
+tools/build.py
+tools/personalize.py
