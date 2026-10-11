@@ -54,7 +54,7 @@ def projects():
         mc = 'lg:col-span-7 lg:order-2 lg:col-start-6' if flip else 'lg:col-span-7 '
         tc = 'lg:col-span-5 lg:order-1 lg:col-start-1' if flip else 'lg:col-span-5 '
         img = p.get('image', '')
-        src = img if img and (R / 'public' / img.lstrip('/')).exists() else '/projects/placeholder.png'
+        src = img.lstrip('/') if img and (R / 'public' / img.lstrip('/')).exists() else 'projects/placeholder.png'
         tag = (p['year'] + ' · ' if p['year'] else '') + p['tag']
         links = ''
         if p['live']:
@@ -83,7 +83,7 @@ def contact_rows():
     if d['github']:
         out += row(d['github'], 'GitHub', STRIP(d['github']), ext)
     out += row('tel:' + d['phone'].replace(' ', ''), 'Phone', d['phoneDisplay'])
-    out += row('/resume.pdf', 'Resume', 'Download PDF', f'download="{d["resumeFile"]}" ')
+    out += row('resume.pdf', 'Resume', 'Download PDF', f'download="{d["resumeFile"]}" ')
     return out
 
 
@@ -96,7 +96,7 @@ tokens = {
     'heroLine2': d['heroLines'][1].replace('<em>', '<em class="not-italic text-accent">'),
     'heroIntro': e(d['heroIntro']), 'resumeFile': d['resumeFile'],
     'aboutLead': e(d['aboutLead']), 'aboutP1': e(d['aboutParagraphs'][0]), 'aboutP2': e(d['aboutParagraphs'][1]),
-    'photo': d.get('photo', '/suyash.jpg'), 'coords': d['coords'],
+    'photo': d.get('photo', 'suyash.jpg').lstrip('/'), 'coords': d['coords'],
     'skillsHeading': e(d['skillsHeading']), 'experienceHeading': e(d['experienceHeading']),
     'projectsHeading': e(d['projectsHeading']), 'contactHeading': e(d['contactHeading']),
     'contactIntro': e(d['contactIntro']), 'email': d['email'], 'contactNote': e(d['contactNote']),
