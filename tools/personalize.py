@@ -5,6 +5,7 @@
 import html
 import json
 import pathlib
+import re
 
 R = pathlib.Path(__file__).resolve().parent.parent
 d = json.loads((R / 'src/data/portfolio.json').read_text())
@@ -30,22 +31,40 @@ def what_i_do():
 def skills():
     out = ''
     for cat, items in d['skills']:
+        core = [n for n, strong in items if strong]
+        more = [n for n, strong in items if not strong]
         spans = ''
-        for i, (name, strong) in enumerate(items):
-            sep = '<span aria-hidden="true" class="text-line-strong"> · </span>' if i < len(items) - 1 else ''
-            spans += f'<span><span class="whitespace-nowrap text-{"ink" if strong else "muted"}">{e(name)}</span>{sep}</span>'
+        for i, name in enumerate(core):
+            sep = '<span aria-hidden="true" class="text-line-strong"> · </span>' if i < len(core) - 1 else ''
+            spans += f'<span><span class="whitespace-nowrap text-ink">{e(name)}</span>{sep}</span>'
+        also = f'<p class="mt-3 text-[15px] leading-relaxed text-muted">Also used: {e(", ".join(more))}</p>' if more else ''
         out += (f'<div {REV}><div class="grid gap-3 border-t border-line py-8 lg:grid-cols-12 lg:gap-10"><h3 class="text-label pt-1 text-muted lg:col-span-3">{e(cat)}</h3>'
-                f'<p class="text-lg leading-[1.9] lg:col-span-9">{spans}</p></div></div>')
+                f'<div class="lg:col-span-9"><p class="text-lg leading-[1.9]">{spans}</p>{also}</div></div></div>')
     return '<div class="mt-16 lg:mt-20">' + out
+
+
+def bold(t):
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong class="font-semibold text-ink">\1</strong>', t)
 
 
 def experience():
     def one(x):
-        bl = ''.join(f'<li class="border-l border-line-strong pl-4 leading-relaxed text-muted">{e(b)}</li>' for b in x['bullets'])
+        bl = ''.join(f'<li class="border-l border-line-strong pl-4 leading-relaxed text-muted">{bold(e(b))}</li>' for b in x['bullets'])
         return (f'<li><div {REV}><div class="grid gap-4 border-t border-line py-10 lg:grid-cols-12 lg:gap-10"><div class="text-label space-y-1.5 text-muted lg:col-span-3 lg:pt-2"><p>{x["dates"]}</p><p>{e(x["place"])}</p></div>'
                 f'<div class="lg:col-span-9"><h3 class="text-display-sm text-ink">{e(x["role"])}<span class="text-muted"> — </span><span class="text-accent">{e(x["org"])}</span></h3>'
                 f'<ul class="mt-5 max-w-[68ch] space-y-2.5">{bl}</ul></div></div></div></li>')
     return '<ol class="mt-16 lg:mt-20">' + ''.join(one(x) for x in d['experience']) + '</ol>'
+
+
+def media(p, src):
+    img = (f'<img alt="{e(p["name"])} preview" loading="lazy" width="1600" height="900" decoding="async" '
+           f'class="aspect-video w-full rounded-sm border border-line object-cover object-top" style="color:transparent" src="{src}"/>')
+    if p.get('video'):
+        return (f'<button type="button" aria-label="Watch {e(p["name"])} demo video" data-video="{p["video"].lstrip("/")}" class="group/media relative block w-full cursor-pointer text-left">'
+                f'{img}<span class="text-label absolute bottom-0 left-0 border border-line bg-bg/90 px-4 py-3 text-ink" style="margin:1rem">▶ Watch demo</span></button>')
+    if p.get('videoSoon'):
+        return (f'<div class="relative">{img}<span class="text-label absolute bottom-0 left-0 border border-line bg-bg/90 px-4 py-3 text-muted" style="margin:1rem">▶ Demo video — coming soon</span></div>')
+    return img
 
 
 def projects():
@@ -64,11 +83,11 @@ def projects():
         links = f'<div class="mt-7 flex items-center gap-7">{links}</div>' if links else ''
         metric = f'<p class="text-label mt-5" style="color:var(--row-accent)">{e(p["metric"])}</p>' if p['metric'] else ''
         return (f'<article class="border-t border-line py-14 lg:py-20" style="--row-accent:var(--hue-{p["accent"]})"><div class="grid gap-10 lg:grid-cols-12 lg:items-center">'
-                f'<div class="{mc}" {REV}><img alt="{e(p["name"])} preview" loading="lazy" width="1600" height="900" decoding="async" class="aspect-video w-full rounded-sm border border-line object-cover object-top" style="color:transparent" src="{src}"/></div>'
+                f'<div class="{mc}" {REV}>{media(p, src)}</div>'
                 f'<div class="{tc}"><div {REV}><span aria-hidden="true" class="index-numeral block" style="color:color-mix(in srgb, var(--row-accent) 40%, transparent)">{i + 1:02d}</span>'
                 f'<p class="text-label mt-4" style="color:var(--row-accent)">{e(tag)}</p><h3 class="text-display-sm mt-3 text-ink">{e(p["name"])}</h3><p class="mt-2 text-lg text-muted">{e(p["subtitle"])}</p>'
                 f'<p class="mt-5 leading-[1.8] text-muted">{e(p["description"])}</p>{metric}<p class="mt-5 font-mono text-[13px] leading-relaxed text-muted">{e(p["stack"])}</p>{links}</div></div></div></article>')
-    return '<div class="mt-16 lg:mt-20">' + ''.join(one(i, p) for i, p in enumerate(d['projects']))
+    return '<div class="mt-16 lg:mt-20">' + ''.join(one(i, p) for i, p in enumerate(x for x in d['projects'] if not x.get('hidden')))
 
 
 def contact_rows():
@@ -82,7 +101,6 @@ def contact_rows():
         out += row(d['linkedin'], 'LinkedIn', STRIP(d['linkedin']), ext)
     if d['github']:
         out += row(d['github'], 'GitHub', STRIP(d['github']), ext)
-    out += row('tel:' + d['phone'].replace(' ', ''), 'Phone', d['phoneDisplay'])
     out += row('resume.pdf', 'Resume', 'Download PDF', f'download="{d["resumeFile"]}" ')
     return out
 

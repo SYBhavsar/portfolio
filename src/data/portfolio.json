@@ -19,19 +19,19 @@
   "stats": [
     [
       "1000+",
-      "Daily user queries"
+      "Daily user queries · Graas"
     ],
     [
       "5,000+",
-      "Customers reached"
+      "Customers reached · Graas"
     ],
     [
       "500+",
-      "Concurrent sessions"
+      "Concurrent sessions · Graas"
     ],
     [
       "12",
-      "Tenant orgs on the platform"
+      "Tenant orgs · Graas"
     ]
   ],
   "aboutLead": "I'm an AI Engineer at Graas in Pune, building real-time voice AI and LLM/RAG systems.",
@@ -59,6 +59,10 @@
     [
       "Availability",
       "Open to AI engineering roles — Pune or remote (India)."
+    ],
+    [
+      "Publication",
+      "Predicting Student Placement using Machine Learning Models: A Comparative Analysis — International Journal For Multidisciplinary Research (May 2024)"
     ]
   ],
   "whatIDo": [
@@ -175,19 +179,19 @@
         ],
         [
           "WebRTC",
-          0
+          1
         ],
         [
           "WebSockets",
-          0
+          1
         ],
         [
           "Redis",
-          0
+          1
         ],
         [
           "Celery",
-          0
+          1
         ]
       ]
     ],
@@ -294,12 +298,12 @@
       "role": "AI Engineer",
       "org": "Graas",
       "bullets": [
-        "Designed, built and deployed Graas's real-time voice AI system end to end for WhatsApp voice calls and web — a full-duplex WebRTC/WebSocket pipeline with a pluggable provider layer (OpenAI Realtime, Gemini Live) and live-agent hand-off; scaled to outbound campaigns reaching 5,000+ customers.",
-        "Built live call-quality and latency monitoring that brings root-cause debugging of production voice issues to under 14 minutes, plus an evaluation system combining manual review and A/B testing.",
-        "Developed an LLM-powered conversational AI system handling 1000+ daily user queries, with hybrid product retrieval (DSL-based filtering, KNN semantic search, structured → vector → keyword fallback).",
-        "Cut response latency by ~40% with Redis-based asynchronous processing — queue-based webhook ingestion decoupled from LLM generation, per-organization prompt caching and short-TTL product caching — on FastAPI and Laravel services supporting 500+ concurrent sessions.",
-        "Engineered a versioned hook-based customization framework with a UI function runner, used by 10+ client organizations to add custom tools and scheduled jobs without code changes or redeploys.",
-        "Integrated WhatsApp and Facebook APIs (70% of interactions via messaging channels) and designed multi-tenant access control — OTP auth and org-scoped data isolation across 12 tenant organizations."
+        "**Built Graas's real-time voice AI end to end** — a full-duplex WebRTC/WebSocket pipeline for WhatsApp voice calls and web, with a pluggable provider layer (OpenAI Realtime, Gemini Live) and live-agent hand-off; scaled to outbound campaigns reaching 5,000+ customers.",
+        "**Brought root-cause debugging of production voice issues to under 14 minutes** with live call-quality and latency monitoring, plus an evaluation system combining manual review and A/B testing.",
+        "**Shipped an LLM conversational AI handling 1000+ daily user queries**, with hybrid product retrieval (DSL-based filtering, KNN semantic search, structured → vector → keyword fallback).",
+        "**Cut response latency by ~40%** with Redis-based asynchronous processing — queue-based webhook ingestion decoupled from LLM generation, per-organization prompt caching and short-TTL product caching — on FastAPI and Laravel services supporting 500+ concurrent sessions.",
+        "**Let 10+ client organizations add custom tools and scheduled jobs without code changes or redeploys**, via a versioned hook-based customization framework with a UI function runner.",
+        "**Designed multi-tenant access control across 12 tenant organizations** (OTP auth, org-scoped data isolation) and integrated WhatsApp and Facebook APIs, which carry 70% of interactions."
       ]
     },
     {
@@ -308,8 +312,8 @@
       "role": "Software Engineer Intern",
       "org": "Graas",
       "bullets": [
-        "Built a Spring Boot data-operations automation framework for metrics query workflows with approval tracking, reducing manual verification steps across 5 teams.",
-        "Developed a static impact-analysis tool for Magento using PHPStan, PHPParser and AST parsing; it cut manual regression-testing time by about 30% across 50+ modules."
+        "**Reduced manual verification steps across 5 teams** with a Spring Boot data-operations automation framework for metrics query workflows with approval tracking.",
+        "**Cut manual regression-testing time by about 30% across 50+ modules** with a static impact-analysis tool for Magento built on PHPStan, PHPParser and AST parsing."
       ]
     }
   ],
@@ -326,7 +330,8 @@
       "stack": "Python / FastAPI / WebRTC / WebSockets / OpenAI / Gemini",
       "live": "",
       "code": "https://github.com/SYBhavsar/VoiceCallingAgent",
-      "image": ""
+      "image": "",
+      "video": "/projects/demo-placeholder.webm"
     },
     {
       "accent": "amber",
@@ -365,7 +370,8 @@
       "stack": "React 19 / Vite / Tailwind CSS / React Router",
       "live": "https://gpavbhag.vercel.app",
       "code": "https://github.com/SYBhavsar/GpavbhaG",
-      "image": ""
+      "image": "",
+      "hidden": true
     },
     {
       "accent": "violet",
@@ -391,7 +397,8 @@
       "stack": "Laravel / Alpine.js / Tailwind CSS",
       "live": "",
       "code": "https://github.com/SYBhavsar/spellchecker",
-      "image": ""
+      "image": "",
+      "hidden": true
     }
   ],
   "contactHeading": "Have something worth shipping?",

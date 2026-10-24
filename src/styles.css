@@ -12,7 +12,7 @@ header nav a,header nav button,footer a,#hero .link-underline,article .link-unde
 header nav a::after,header nav button::after,footer a::after,#hero .link-underline::after,article .link-underline::after{content:"";position:absolute;inset:-12px -8px}
 header nav button[aria-expanded]{border:1px solid var(--line-strong);padding:0 .9rem;height:2.5rem}
 /* hero fits 1440x900 with stats visible */
-#hero{padding-top:5rem}
+#hero{padding-top:5rem;min-height:0}@media (min-width:40rem){#hero{padding-top:7rem}}
 .text-display-xl{font-size:clamp(2.75rem,8vw,7rem)}
 @media (min-width:40rem){#hero h1{margin-top:2.5rem}#hero h1+div{margin-top:2rem;padding-bottom:2.5rem}#hero dl>div{padding-block:1.5rem}}
 /* contact email fits narrow screens */

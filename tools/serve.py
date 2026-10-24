@@ -3,7 +3,7 @@ import os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 # Only the site itself is served; résumé sources, FAQ, reference/ and tooling stay private.
-ALLOWED = ('/index.html', '/src/', '/public/', '/fonts/', '/icon.svg', '/profile-placeholder.svg', '/suyash.jpg', '/resume.pdf', '/og.png', '/robots.txt')
+ALLOWED = ('/index.html', '/src/', '/public/', '/fonts/', '/projects/', '/icon.svg', '/profile-placeholder.svg', '/suyash.jpg', '/resume.pdf', '/og.png', '/robots.txt')
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
